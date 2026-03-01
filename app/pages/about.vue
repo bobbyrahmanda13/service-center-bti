@@ -1,7 +1,14 @@
 <template>
   <section>
-    <p>This page will be displayed at the /about route.</p>
+    <pThis page will be displayed at the /about route.</p>
     App
   </section>
 
-</template>
+</template
+
+<script>
+export default {
+const testin = ref() // seharusnya ref() lsp ga jalan error
+
+}
+</script>
