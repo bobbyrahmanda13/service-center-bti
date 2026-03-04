@@ -4,14 +4,6 @@ import type { NavigationMenuItem } from '@nuxt/ui'
 const route = useRoute()
 
 const items = computed<NavigationMenuItem[]>(() => [{
-  label: 'Docs',
-  to: '/docs/getting-started',
-  active: route.path.startsWith('/docs/getting-started')
-}, {
-  label: 'Components',
-  to: '/docs/components',
-  active: route.path.startsWith('/docs/components')
-}, {
   label: 'Figma',
   to: 'https://go.nuxt.com/figma-ui',
   target: '_blank'
@@ -20,11 +12,13 @@ const items = computed<NavigationMenuItem[]>(() => [{
   to: 'https://github.com/nuxt/ui/releases',
   target: '_blank'
 }])
+
+const logoItemo='i-simple-icons-discord'
 </script>
 <template>
   <UHeader>
     <template #title>
-      <Logo class="h-6 w-auto" />
+      <UPageLogos :item="logoItemo" class="h-6 w-auto" title="Nuxt UI"/>
     </template>
 
     <UNavigationMenu :items="items" />
@@ -32,7 +26,7 @@ const items = computed<NavigationMenuItem[]>(() => [{
     <template #right>
       <UColorModeButton />
 
-      <UButton color="neutral" variant="ghost" to="https://github.com/nuxt/ui" target="_blank" icon="i-lucide-github"
+      <UButton color="neutral" variant="ghost" to="https://github.com/nuxt/ui" target="_blank" icon="i-simple-icons-github"
         aria-label="GitHub" />
     </template>
 

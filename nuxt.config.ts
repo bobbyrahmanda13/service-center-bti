@@ -2,8 +2,14 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
-  modules: ['@nuxt/ui','@nuxt/icon'],
-  css:['~/assets/css/main.css'],
+  modules: ['@nuxt/ui', '@nuxt/icon'],
+  css: ['~/assets/css/main.css'],
+  icon: {
+    provider: 'iconify',
+    serverBundle: {
+      collections: ['lucide', 'heroicons', 'ph','simple-icons'] // Collections yang sering dipakai
+    }
+  }
   // colorMode: {
   //   preference: 'system',     // default: 'system' | 'light' | 'dark'
   //   fallback: 'light',        // fallback jika tidak ada system preference
